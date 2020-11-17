@@ -3,10 +3,10 @@
 # [Try it here](https://lorossi.github.io/p5js-perlin/)
 
 ## Example outputs
-![first video](https://github.com/lorossi/lissajous/blob/master/output/videos/github/1.gif)  
-![second video](https://github.com/lorossi/lissajous/blob/master/output/videos/github/2.gif)  
-![third video](https://github.com/lorossi/lissajous/blob/master/output/videos/github/3.gif)  
-![fourth video](https://github.com/lorossi/lissajous/blob/master/output/videos/github/4.gif)  
+![first video](https://github.com/lorossi/p5js-perlin/blob/master/output/videos/github/1.gif)  
+![second video](https://github.com/lorossi/p5js-perlin/blob/master/output/videos/github/2.gif)  
+![third video](https://github.com/lorossi/p5js-perlin/blob/master/output/videos/github/3.gif)  
+![fourth video](https://github.com/lorossi/p5js-perlin/blob/master/output/videos/github/4.gif)  
 
 ## Notes
 The js script might run very slowly on your device. Not much I can do, since p5js isn't the fastest framework available.
