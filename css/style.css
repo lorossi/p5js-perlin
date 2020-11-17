@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto-Thin.ttf);
+}
+
+body {
+  background-color: #000000;
+  font-family: Roboto;
+  color: #AFAFAF;
+  user-select: none;
+}
+
+a:link, a:active, a:visited, a:hover, a {
+  color: inherit;
+}
+
+#sketch {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+}
+
+#instructions {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50vw;
+  bottom: 0vh;
+
+  text-align: center;
+  font-size: 2vh;
+}
+
+.credits  {
+  position: absolute;
+  bottom: 2vh;
+  font-size: 2vh;
+}
+
+#left {
+  left: 2vw;
+}
+
+#right {
+  right: 2vw;
+}
