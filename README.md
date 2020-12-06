@@ -3,7 +3,7 @@
 # [Try it here](https://lorenzoros.si/p5js-perlin/)
 
 ## What am I looking at?
-Perlin noise is a *"special function"* created by Ken Perlin, an american computer scientist, in 1983.
+Perlin noise is a *"special function"* created by Ken Perlin, an American computer scientist, in 1983.
 
 It can be seen as a particular *random function* with the peculiarity of generating sequences of *smooth* pseudo-random values.
 
@@ -26,6 +26,17 @@ You can watch some rendered videos *down below*, on my [*Instagram page*](https:
 ![second video](https://github.com/lorossi/p5js-perlin/blob/master/output/gifs/2.gif)  
 ![third video](https://github.com/lorossi/p5js-perlin/blob/master/output/gifs/3.gif)  
 ![fourth video](https://github.com/lorossi/p5js-perlin/blob/master/output/gifs/4.gif)  
+
+## Rercording
+I added a way to save each individual frame in order to make videos. Since I didn't want to put this feature in the final product (I don't think it will be used at all by the casual user), I hardcoded a variable (`recording`) inside the `main.js` script. If you want to record your own video, you have to:
+
+1. Clone the repo
+2. Set the `recording` variable to `true`
+3. *(optional)* change the seed for the random function inside the *setNoiseSeed* function
+4. Host the website on your machine
+5. Load the page in your browser
+6. Wait a while
+7. Open the `.tar` files that will be created, extract the frames and stitch them together using a software like `FFMPEG`
 
 ## Notes
 The JS script might run very slowly on your device. Not much I can do, since p5js isn't the fastest framework available. From now on I'll move to using vanilla JS on HTML5 canvas. It's waaaay faster and it doesn't completely lag out mobile devices
