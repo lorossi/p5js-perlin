@@ -33,7 +33,7 @@ function setup() {
   noise_radius = 1.5;
   noise_scl = 0.0007;
   next_mode = 0;
-  recording = true;
+  recording = false;
 
   // canvas creation
   let w, h;
