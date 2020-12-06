@@ -1,4 +1,2 @@
-output/frames
-output/gifs
-output/*.py
+*.py
 output/videos/instagram
