@@ -1,6 +1,6 @@
 # Looping Perlin Noise in p5js
 *A collection of looping noisy gifs made with p5js*
-# [Try it here](https://lorenzoros.si/p5js-perlin/index.html)
+# [Try it here](https://lorenzoros.si/p5js-perlin/)
 
 ## What am I looking at?
 Perlin noise is a *"special function"* created by Ken Perlin, an american computer scientist, in 1983.
@@ -19,7 +19,7 @@ As a matter of fact, I used a variation of the Perlin noise called *Simplex nois
 
 **Well, where can I see it in action?**
 
-You can watch some rendered videos *down below*, on my [*Instagram page*](https://www.instagram.com/lorossi97/), inside the *output/videos* folder or by visiting [my website](https://lorenzoros.si/p5js-perlin/index.html) to try it out in real time!
+You can watch some rendered videos *down below*, on my [*Instagram page*](https://www.instagram.com/lorossi97/), inside the *output/videos* folder or by visiting [my website](https://lorenzoros.si/p5js-perlin/) to try it out in real time!
 
 ## Example outputs
 ![first video](https://github.com/lorossi/p5js-perlin/blob/master/output/gifs/1.gif)  
