@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 // SETTINGS
 let fps, show_fps; // frames per second
 let show_progress; // show progress line
@@ -141,29 +143,29 @@ function draw() {
       line(0, 0, line_len, 0);
     }
 
-    if (percent >= .25) {
+    if (percent >= 0.25) {
       if (percent > 0.5) {
         line_len = height;
       } else {
-        line_len = (percent - .25) * height * 4;
+        line_len = (percent - 0.25) * height * 4;
       }
       line(width, 0, width, line_len);
     }
 
-    if (percent >= .5) {
+    if (percent >= 0.5) {
       if (percent > 0.75) {
         line_len = width;
       } else {
-        line_len = (percent - .5) * width * 4;
+        line_len = (percent - 0.5) * width * 4;
       }
       line(width, height, width - line_len, height);
     }
 
-    if (percent >= .75) {
+    if (percent >= 0.75) {
       if (percent > 1) {
         line_len = height;
       } else {
-        line_len = (percent - .75) * height * 4;
+        line_len = (percent - 0.75) * height * 4;
       }
       line(0, height, 0, height - line_len);
     }
@@ -203,7 +205,7 @@ function draw() {
     stroke(255);
     strokeWeight(2);
     fill(0, 220);
-    rect(0, 0, width * sketch_scl * .9, height * sketch_scl * .9 / 2);
+    rect(0, 0, width * sketch_scl * 0.9, height * sketch_scl * 0.9 / 2);
     noStroke();
     fill(255);
     textSize(24);
@@ -246,7 +248,6 @@ class NoiseItem {
     this.scl = scl;
     this.mode = mode;
 
-    this.noise_value;
     this.color = 255;
   }
 
@@ -350,13 +351,13 @@ class NoiseItem {
       push();
       rotation = minutes / 60 * TWO_PI - PI;
       rotate(rotation);
-      line(0, 0, 0, this.scl / 2 * .7);
+      line(0, 0, 0, this.scl / 2 * 0.7);
       pop();
 
       push();
       rotation = hours / 60 * TWO_PI - PI;
       rotate(rotation);
-      line(0, 0, 0, this.scl / 2 * .4);
+      line(0, 0, 0, this.scl / 2 * 0.4);
       pop();
     } else if (this.mode === "compasses") {
       let rotation = this.noise_value * TWO_PI * 3;
@@ -376,7 +377,7 @@ class NoiseItem {
     } else if (this.mode === "constellations") {
       let stars = map(this.noise_value, -1, 1, 2, 4);
       let index = Math.floor(stars);
-      let primes = [211, 223, 227, 229, 233]
+      let primes = [211, 223, 227, 229, 233];
 
       noStroke();
       fill(this.color);
@@ -406,7 +407,7 @@ class NoiseItem {
         let cx, cy, theta;
         theta = TWO_PI / points * i * periods;
         cx = this.scl / points * i;
-        cy = this.scl / 2 * cos(theta + phi)
+        cy = this.scl / 2 * cos(theta + phi);
         curveVertex(cx, cy);
       }
       endShape();
@@ -427,7 +428,7 @@ class NoiseItem {
         let cx, cy, theta;
         theta = TWO_PI / points * i * periods;
         cx = this.scl / points * i;
-        cy = this.scl / 2 * cos(theta + phi)
+        cy = this.scl / 2 * cos(theta + phi);
         curveVertex(cx, cy);
       }
       endShape();
@@ -493,14 +494,14 @@ class NoiseItem {
       }
       pop();
     } else if (this.mode === "ellipses") {
-      let smin = .2;
+      let smin = 0.2;
       let sx = map(this.noise_value, -1, 1, smin, 1) * this.scl; // ellipse eccentricity
       let sy = map(this.noise_value, -1, 1, 1, smin) * this.scl; // ellipse eccentricity
       let weight = map(this.noise_value, -1, 1, 0, 5);
 
       noFill();
       stroke(this.color);
-      strokeWeight(weight)
+      strokeWeight(weight);
       ellipse(0, 0, sx, sy);
     } else if (this.mode === "grids") {
       let grid = [256, 384, 448, 480, 496, 504, 508, 510, 511]; // empty to full grid
@@ -554,7 +555,7 @@ class NoiseItem {
       pop();
     } else if (this.mode === "hollow_circles") {
       let outer_size = this.scl;
-      let inner_size = map(this.noise_value, -1, 1, 0, this.scl * .98);
+      let inner_size = map(this.noise_value, -1, 1, 0, this.scl * 0.98);
 
       noStroke();
       fill(this.color);
@@ -632,12 +633,12 @@ class NoiseItem {
       circle(0, 0, this.scl / 10);
     } else if (this.mode === "pacmen") {
       let opening = map(this.noise_value, -1, 1, 0, PI/2);
-      let size = map(this.noise_value, -1, 1, 0, this.scl)
+      let size = map(this.noise_value, -1, 1, 0, this.scl);
       let alpha = map(this.noise_value, -1, 1, 0, 255);
 
       noStroke();
       fill(this.color, alpha);
-      arc(0, 0, size, size, opening, TWO_PI - opening)
+      arc(0, 0, size, size, opening, TWO_PI - opening);
     } else if (this.mode === "polygons_1") {
       let sides = Math.floor(map(this.noise_value, -1, 1, 3, 8));
       let phi = -PI/2;
@@ -815,7 +816,7 @@ function keyPressed() {
     setNoiseSeed();
     progress = 0;
   } else if (keyCode === 13) { // enter
-    setNoiseSeed()
+    setNoiseSeed();
     recording = !recording;
     progress = 0;
     next_mode = 0;
