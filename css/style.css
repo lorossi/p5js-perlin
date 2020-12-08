@@ -14,11 +14,15 @@ a:link, a:active, a:visited, a:hover, a {
   color: inherit;
 }
 
-#sketch {
-  transform: translate(-50%, -50%);
+.container {
+  width: 100vw;
+  height: 100vh;
   position: absolute;
-  left: 50vw;
-  top: 50vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #instructions {
@@ -43,4 +47,10 @@ a:link, a:active, a:visited, a:hover, a {
 
 #right {
   right: 2vw;
+}
+
+@media only screen and (max-width: 481px) {
+  #instructions {
+    bottom: 10vh;
+  }
 }
